@@ -4,4 +4,6 @@ import com.example.hexagonal_architecture.domain.User
 
 interface UserPort {
     fun getUser(): User
+
+    fun createUser(user: User): User
 }
