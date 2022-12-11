@@ -6,5 +6,5 @@ data class User(
     val id: Long,
     val name: String,
     val birthDay: LocalDate,
-    val email: String,
+    val email: String
 )
