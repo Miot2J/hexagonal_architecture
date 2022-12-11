@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class UserMybatisAdapter(
-    private val userMapper: UserMapper
+    private val userMapper: UserMapper,
 ) : UserPort {
     override fun createUser(user: User): User {
         val userData = userMapper.createUser(user)
@@ -14,7 +14,7 @@ class UserMybatisAdapter(
         return userData.toDomain()
     }
 
-    override fun getUser(): User {
+    override fun getUser(id: Long): User {
         TODO("Not yet implemented")
     }
 }
